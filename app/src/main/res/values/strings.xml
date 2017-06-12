@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">CN</string>
+
+    <string name="common_ok">确定</string>
+    <string name="common_cancel">取消</string>
+    
+    <string name="go_to_set">去设置</string>
+    <string name="app_name">FitManager</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	
+    <!--Nav drawer -->
+    <string name="navdrawer_item_native_cardslib">CardViewNative</string>
+    <string name="navdrawer_item_cardslib_v1">CardView v1</string>
+    <string name="navdrawer_item_guidelines">Guidelines</string>
+    <string name="navdrawer_item_donate">Donate</string>
+    <string name="navdrawer_item_info">About</string>
+    <string name="navdrawer_item_github">Github code</string>
+    <string name="navdrawer_item_googleplus">G+ community</string>
+
+
+    <string name="navdrawer_item_train">训练</string>
+    <string name="navdrawer_item_history">训练历史</string>
+    <string name="navdrawer_item_competition">训练排名</string>
+    <string name="navdrawer_item_analysis">统计分析</string>
+    <string name="navdrawer_item_prescription">运动处方</string>
+    <string name="navdrawer_item_setting">设置</string>
+
+
+    <string name="train_training_title">我的训练</string>
+</resources>

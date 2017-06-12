@@ -1,0 +1,40 @@
+<resources>
+
+    <color name="common_theme">#ff1499f7</color>
+    <color name="common_indicate_button">#ff40bf45</color>
+    <color name="common_transparent">#00000000</color>
+	<color name="common_title">#ff191919</color>
+	<color name="common_sub_title">#ff757575</color>
+    <color name="common_text">#ff333333</color>
+    <color name="common_text_disable">#ff999999</color>
+    <color name="common_text_hint">#ffcccccc</color>
+    <color name="common_sub_text">#ff999999</color>
+    <color name="common_url">#ff656565</color>
+    <color name="common_link_text">#ff1981eb</color>
+    <color name="common_select">#ff1499f7</color>
+    <color name="common_unselect">#ffaaaaaa</color>
+    <color name="common_press_bg">#0d191919</color>
+    <color name="common_border_press">#ff0472d0</color>
+    <color name="common_dark_press">#ff2869a9</color>
+    <color name="common_contrast">#ffffffff</color>
+    <color name="common_splitline">#19000000</color>
+    <color name="common_background">#fff3f3f3</color>
+    <color name="common_item_bg">#00ffffff</color>
+    <color name="common_item_bg_pressed">#0d191919</color>
+    <color name="common_card_item_bg">#00ffffff</color>
+    <color name="common_card_item_bg_pressed">#33000000</color>
+    <color name="common_hint">#ffd1d1d1</color>
+    <color name="common_icon">#ff707070</color>
+    <color name="common_icon_pressed">#ffcccccc</color>
+    <color name="common_suggest_icon">#ffa3a3a3</color>
+    <color name="common_alert">#fffc3939</color>
+    <color name="common_disable">#ffcccccc</color>
+    <color name="common_indicator">#ff2cadf1</color>
+    <color name="common_focused">#ff2cadf1</color>
+    <color name="common_sub_focused">#ff80cef7</color>
+    <color name="common_ico_focused">#ff56bdf4</color>
+    <color name="common_focused_bg">#fff2fbff</color>
+    <color name="common_button_text">#ff333333</color>
+    <color name="common_special_button_text">#ffffffff</color>
+
+</resources>

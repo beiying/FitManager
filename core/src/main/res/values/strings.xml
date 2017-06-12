@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Core</string>
+    <string name="weibo_toast_auth_success">微博授权成功</string>
+    <string name="weibo_toast_auth_failed">微博授权失败</string>
+    <string name="weibo_toast_auth_canceled">取消微博授权</string>
+    <string name="weibo_toast_obtain_code_success">获取微博 Code 成功</string>
+    <string name="weibo_toast_obtain_code_failed">获取微博 Code 失败</string>
+    <string name="weibo_toast_obtain_token_success">获取微博 Token 成功</string>
+    <string name="weibo_toast_obtain_token_failed">获取微博 Token 失败</string>
+</resources>

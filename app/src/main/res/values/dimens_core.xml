@@ -1,0 +1,35 @@
+<resources>    
+    <dimen name="textsize_0">10dip</dimen>
+    <dimen name="textsize_1">12dip</dimen>
+    <dimen name="textsize_2">14dip</dimen>
+    <dimen name="textsize_3">15dip</dimen>
+    <dimen name="textsize_4">17dip</dimen>
+    <dimen name="textsize_5">20dip</dimen>
+    <dimen name="textsize_6">22dip</dimen>
+    <dimen name="textsize_7">24dip</dimen>
+    <dimen name="textsize_8">28dip</dimen>
+    <dimen name="textsize_9">30dip</dimen>            
+    
+    <dimen name="itemsize_0">22dip</dimen>    
+    <dimen name="itemsize_1">28dip</dimen>    
+    <dimen name="itemsize_2">32dip</dimen>
+    <dimen name="itemsize_3">36dip</dimen>
+    <dimen name="itemsize_4">40dip</dimen>
+    <dimen name="itemsize_5">44dip</dimen>
+    <dimen name="itemsize_6">46dip</dimen>    
+    <dimen name="itemsize_7">52dip</dimen>
+    <dimen name="itemsize_8">60dip</dimen>
+    <dimen name="itemsize_9">68dip</dimen>    
+    <dimen name="itemsize_10">80dip</dimen>
+    <dimen name="itemsize_11">100dip</dimen>
+    <dimen name="itemsize_12">120dip</dimen>
+    
+    <dimen name="padding_0">2dip</dimen>
+    <dimen name="padding_1">4dip</dimen>
+    <dimen name="padding_2">8dip</dimen>
+    <dimen name="padding_3">12dip</dimen>     
+    <dimen name="padding_4">16dip</dimen>    
+    <dimen name="padding_5">20dip</dimen>
+    <dimen name="padding_6">24dip</dimen>            
+
+</resources>

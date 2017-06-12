@@ -1,0 +1,11 @@
+core包独立于应用，包含应用的基本组件。
+主包：基础组件
+collect: 扩展集合
+data: 数据持久化组件，包括文件、SharedPreferrence
+sqlite: 数据库组件
+net: 网络组件
+ui: UI组件
+utils: 工具
+
+
+注意：应用使用core包，必须在主Activity创建时对core包进行初始化，调用LeCoreManager.init方法实现。

@@ -1,0 +1,249 @@
+<resources>
+
+    <color name="common_theme_color">#00A185</color>
+    <color name="common_theme_minor_color">#0EC0A1</color>
+    <color name="common_clicked_bg_color">#E8E8E8</color>
+    
+    <!-- 数据采集页面 -->
+    <color name="data_collect_content_view_bg">#EEEEEE</color>
+    <color name="data_collect_line_char_bg">#00A185</color>
+    <color name="data_collect_begin_button_normal_bg">#00A185</color>
+    <color name="data_collect_begin_button_pressed_bg">#0EC0A1</color>
+    <color name="data_collect_key_text_color">#838383</color>
+    
+    <!-- 导航栏 -->
+    <color name="nav_item_selected">#00A185</color>
+    
+    <!-- 历史记录页面 -->
+    <color name="history_indicator_normal_color">#CDCDCD</color>
+    
+    <!-- test -->
+    <color name="demo_title_section_textcolor">#2a84a5</color>
+
+    <!-- customize header standard title
+    <color name="card_text_color_header">#990066</color>
+    -->
+
+    <color name="carddemo_googlenowbirth_title">@android:color/holo_blue_dark</color>
+
+    <!-- Purchase -->
+    <color name="demo_purchase_normal">#ececec</color>
+    <color name="demo_purchase_pressed">#CC2A84A5</color>
+
+    <!-- color card -->
+    <color name="demo_card_background_color1">#FFBB33</color>
+    <color name="demo_card_background_color2">#98CC00</color>
+    <color name="demo_card_background_color3">#A966CC</color>
+    <color name="demo_card_background_color4">#33B4E4</color>
+    <color name="demo_card_background_color5">#FF4343</color>
+
+    <!-- Birth new-->
+    <color name="demo_card_header_birth_color">#707070</color>
+    <color name="demo_card_line_birth_color">#E5E5E5</color>
+
+    <!-- Weather -->
+    <color name="demo_card_line_weather_color">#E5E5E5</color>
+    <color name="demo_card_weather_city_color">#A4A4A4</color>
+    <color name="demo_card_weather_temperature_color">#868686</color>
+
+    <!-- Stock -->
+    <color name="demo_card_stock_negative">#FF4646</color>
+    <color name="demo_card_stock_positive">#29A426</color>
+
+
+    <!-- Material -->
+    <color name="body_text_1">#de000000</color>
+    <color name="body_text_2">#8a000000</color>
+    <color name="body_text_3">#60000000</color>
+    <color name="body_text_disabled">#44000000</color>
+
+    <color name="body_text_1_inverse">#deffffff</color>
+    <color name="body_text_2_inverse">#8affffff</color>
+
+    <color name="theme_accent_1">@color/md_light_blue_900</color>
+    <color name="theme_accent_1_light">#8ad4fa</color>
+    <color name="theme_accent_2">#e91e63</color>
+
+    <color name="demo_primary_color">#2196F3</color>
+    <color name="demo_colorPrimaryDark">#0288D1</color>
+
+    <color name="navdrawer_background">#ffffffff</color>
+    <color name="navdrawer_text_color">@color/body_text_1</color>
+    <color name="navdrawer_text_color_selected">@color/theme_accent_1</color>
+    <color name="navdrawer_icon_tint">#808080</color>
+    <color name="navdrawer_icon_tint_selected">@color/theme_accent_1</color>
+
+    <color name="gray_background">#ececec</color>
+    <color name="native_background">#ececec</color>
+    <color name="navdrawer_scrim">#6000</color>
+
+    <color name="carddemo_halfcolored_color">#109D58</color>
+    <color name="carddemo_blackcolored_color">#272727</color>
+    
+    
+    
+    <!-- Card Color -->
+    <color name="card_background">#FFF</color>
+    <color name="card_background_header">#FFF</color>
+    <color name="card_backgroundExpand">#515254</color>
+    <color name="card_native_background">@android:color/transparent</color>
+
+    <color name="card_text_color_header">#000</color>
+    <color name="card_expand_title_color">#B3B2B2</color>
+
+    <!-- Used by selector -->
+    <color name="card_pressed">#7E0099CC</color>
+    <color name="card_activated">#CFE9F3</color>
+    <color name="card_foreground_activated">#99CFE9F3</color>
+
+    <color name="card_pressed_kitkat">#10000000</color>
+    <color name="card_activated_kitkat">#ADE1F4</color>
+    <color name="card_foreground_activated_kitkat">#99ADE1F4</color>
+
+    <!-- Used by card with list -->
+    <color name="card_base_cardwithlist_divider_color">#E5E5E5</color>
+    <color name="card_base_cardwithlist_background_list_color">#10000000</color>
+
+    <color name="card_native_base_cardwithlist_divider_color">#E5E5E5</color>
+    <color name="card_native_base_cardwithlist_background_list_color">#10000000</color>
+
+    <!-- Used by sectioned list -->
+    <color name="card_section_container_color">#10000000</color>
+    <color name="card_section_title_color">@android:color/black</color>
+    
+    <!-- 公用颜色 -->
+    <color name="common_theme">#ff2cadf1</color>
+    <color name="common_transparent">#00000000</color>
+    <color name="common_white">#ffffffff</color>
+    <color name="common_black">#ff000000</color>
+    <color name="common_black_no_select">#7f000000</color>
+	<color name="common_title">#ff191919</color>
+	<color name="common_sub_title">#ff757575</color>
+    <color name="common_text">#ff191919</color>
+    <color name="common_text_disable">#ff999999</color>
+    <color name="common_sub_text">#ff757575</color>
+    <color name="common_url">#ff656565</color>
+    <color name="common_link_text">#ff1981eb</color>
+    <color name="common_select">#ff2cadf1</color>
+    <color name="common_unselect">#ffaaaaaa</color>
+    <color name="common_press">#66000000</color>
+    <color name="common_press_bg">#33191919</color>
+    <color name="common_border_press">#ff0472d0</color>
+    <color name="common_dark_press">#ff2869a9</color>
+    <color name="common_contrast">#ffffffff</color>
+    <color name="common_blue">#ff9bbde3</color>
+    <color name="common_splitline">#19000000</color>
+    <color name="common_splitline_shadow">#00000000</color>
+    <color name="common_vertical_splitline">#ffEFEFEF</color>
+    <color name="common_vertical_splitline_shadow">#ffFDFDFD</color>
+    <color name="common_background">#fff3f3f3</color>
+    <color name="common_item_bg">#ffffffff</color>
+    <color name="common_hint">#ffd1d1d1</color>
+    <color name="common_icon">#ff707070</color>
+    <color name="common_feature_bg">#fffcfcfc</color>
+    <color name="common_alert">#fffc3939</color>
+
+    <!-- 按下等情况下反色效果 -->
+    <color name="common_shadow">#33000000</color>
+    <!-- <color name="common_bg">#ffdfe0e6</color> -->
+    <color name="common_main">#ffccffcc</color>
+    <color name="common_highlight">#ff6d90b8</color>
+    <color name="common_disable">#ffbabbbc</color>
+    <color name="common_focused">#ff2cadf1</color>
+    <color name="common_sub_focused">#ff80cef7</color>
+    <color name="common_ico_focused">#ff56bdf4</color>
+    <color name="common_focused_bg">#fff2fbff</color>
+
+    <!-- indicator -->
+    <color name="home_indicator_select">#ff0FB33B</color>
+    <color name="home_indicator_unselect">#ffCDCDCD</color>
+    <color name="tab_indicator_select">#ff2cadf1</color>
+    
+    <color name="home_text">#ff757575</color>
+    
+    <!-- 左屏导航 -->
+    <color name="navi_hotwords_change_button">#ffACACAC</color>
+
+    <!-- 地址栏 -->
+    <color name="titlebar_bg">#fff3f3f3</color>
+    <color name="titlebar_icon">#ff707070</color>
+    <color name="titlebar_icon_press">#ff707070</color>
+    <color name="titlebar_vertical_split_line">#ffB8B8B8</color>
+    <color name="titlebar_bottom_line">#33000000</color>
+    <color name="titlebar_search">#ff686868</color>
+    <color name="titlebar_prompt">#7f000000</color>
+    <color name="titlebar_text">#7f000000</color>
+
+    <!-- 工具栏 -->
+    <color name="toolbar_button_press">#4d6d90b8</color>
+    <color name="toolbar_bg">#ffeff1f3</color>
+    <color name="toolbar_split_line">#33000000</color>
+    <color name="toolbar_split_line_shadow">#00000000</color>
+    <color name="toolbar_text">#ff5D5D5D</color>
+    <color name="toolbar_text_press">#ff5D5D5D</color>
+    <color name="toolbar_text_disable">#ff999999</color>
+    <color name="toolbar_icon">#ff707070</color>
+
+    <!-- 菜单栏 -->
+    <color name="menu_item_press">#4d6d90b8</color>
+    
+    <!-- 书签历史 -->
+    <color name="fav_star_press">#ff929497</color>
+    <color name="history_pivot_bg">#00f9f9f9</color>
+    <color name="history_pivot_split">#19000000</color>
+    <color name="history_time_split">#19000000</color>
+    <color name="history_time_split_shadow">#00ffffff</color>
+    <color name="history_pivot_top_line">#00ffffff</color>
+    <color name="bookmark_no_record">#ffd1d1d1</color>
+    <color name="history_no_record">#ffd1d1d1</color>
+
+    <!-- ssl -->
+    <color name="ssl_text_label">#ffffffff</color>
+    <color name="ssl_text_value">#ffffffff</color>
+
+    <!-- download -->
+    <color name="download_item_bg">#fff3f4f7</color>
+    <color name="download_no_record">#ffd1d1d1</color>
+
+    <!-- fileExplorer -->
+    <color name="fileexplorer_list_dark_bg">#ffF9F9F9</color>
+    <color name="fileexplorer_list_bg">#ffffffff</color>
+    <color name="fileexplorer_list_item_bg_light_night">#ff292c33</color>
+    <color name="fileexplorer_list_item_bg_dark_night">#ff25272e</color>
+    <color name="fileexplorer_text_night">#ffababab</color>
+   	<color name="fileexplorer_list_item_title_night">#ffababab</color>
+	<color name="text_shadow_color">#c0000000</color> 
+
+    <!-- fullscreen -->
+    <color name="fullscreen_clock_color">#ffb3b3b3</color>
+	
+	<!-- qrcode -->
+	<color name="contents_text">#ff000000</color>
+	<color name="encode_view">#ffffffff</color>
+	<color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+	<color name="result_minor_text">#ffc0c0c0</color>
+	<color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+	<color name="result_text">#ffffffff</color>
+	<color name="result_view">#b0000000</color>
+	<color name="status_text">#ffffffff</color>
+	<color name="viewfinder_mask">#60000000</color>
+	<color name="frame_shine">#ff4d98f4</color>
+	
+	<!-- rss -->
+	<color name="rss_author">#ffB3B3B3</color>
+	<color name="rss_head_bg_when_no_pic">#ff8aba56</color>
+	<color name="rss_head_title_bg">#B2000000</color>
+	<color name="rss_readed">#ff999999</color>
+	
+	<!-- setting -->
+	<color name="setting_sub_text">#7f000000</color>
+	
+	<!-- feedback -->
+	<color name="feedback_submit_disable">#7fFFFFFF</color>
+	
+	<!-- multiwindow button -->
+	<color name="multiwindow_button_num_toolbar">#ff707070</color>
+	<color name="multiwindow_button_num_titlebar">#ff707070</color>
+	<color name="multiwindow_button_num_select">#ff2cadf1</color>
+	
+</resources>

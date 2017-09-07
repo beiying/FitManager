@@ -28,4 +28,12 @@ public class BYTrainingListView extends LeListView {
         }
         return convertView;
     }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = mContent.getMeasuredHeight();
+        setMeasuredDimension(width, height);
+    }
 }

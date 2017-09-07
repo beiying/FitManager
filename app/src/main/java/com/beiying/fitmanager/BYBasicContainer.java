@@ -18,7 +18,7 @@ public class BYBasicContainer extends ContextContainer {
 	public static void switchActivity(Activity activity) {
 		LeCoreManager.init(LeApplicationHelper.PACKAGE, activity, null,
 				null,
-				false);
+				true);
 		if (activity instanceof BYMainActivity) {
 			sMainActivity = (BYMainActivity) activity;
 		}

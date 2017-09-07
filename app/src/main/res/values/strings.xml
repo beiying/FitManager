@@ -29,4 +29,7 @@
 
 
     <string name="train_training_title">我的训练</string>
+    <string name="train_recommend_train_title">今日推荐训练</string>
+    <string name="train_recommend_article_title">今日推荐阅读</string>
+    <string name="train_training_diet_tile">饮食建议</string>
 </resources>

@@ -9,18 +9,17 @@ import android.view.View.OnClickListener;
 import com.beiying.fitmanager.R;
 import com.beiying.fitmanager.core.ui.LeUI;
 import com.beiying.fitmanager.core.ui.LeViewGroup;
-import com.beiying.fitmanager.core.utils.LeUtils;
 import com.beiying.fitmanager.framework.BYSplitLineDrawable;
 
 public class BYNavigationMenuview extends LeViewGroup implements OnClickListener {
-	public static final int ID_COLLECT = 0;
+	public static final int ID_TRAIN = 0;
 	public static final int ID_HISTORY = 1;
 	public static final int ID_COMMUNITY = 2;
 	public static final int ID_ANALYSIS = 3;
 	public static final int ID_PRESCRIPTION = 4;
 	public static final int ID_SETTING = 5;
 	
-	private BYNavigationMenuItemView mCollectPage;
+	private BYNavigationMenuItemView mTrainPage;
 	private BYNavigationMenuItemView mHistoryPage;
 	private BYNavigationMenuItemView mCommunityPage;
 	private BYNavigationMenuItemView mAnalysisPage;
@@ -34,13 +33,13 @@ public class BYNavigationMenuview extends LeViewGroup implements OnClickListener
 		super(context);
 		setBackgroundColor(Color.WHITE);
 		
-		mCollectPage = new BYNavigationMenuItemView(context);
-		mCollectPage.setNormalIcon(R.drawable.nav_collect);
-		mCollectPage.setSelectedIcon(R.drawable.nav_collect_selected);
-		mCollectPage.setText(R.string.navdrawer_item_train);
-		mCollectPage.setOnClickListener(this);
-		mCollectPage.setId(ID_COLLECT);
-		addView(mCollectPage);
+		mTrainPage = new BYNavigationMenuItemView(context);
+		mTrainPage.setNormalIcon(R.drawable.nav_collect);
+		mTrainPage.setSelectedIcon(R.drawable.nav_collect_selected);
+		mTrainPage.setText(R.string.navdrawer_item_train);
+		mTrainPage.setOnClickListener(this);
+		mTrainPage.setId(ID_TRAIN);
+		addView(mTrainPage);
 		
 		mHistoryPage = new BYNavigationMenuItemView(context);
 		mHistoryPage.setNormalIcon(R.drawable.nav_history);

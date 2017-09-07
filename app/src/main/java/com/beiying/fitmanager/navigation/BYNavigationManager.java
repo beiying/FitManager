@@ -2,9 +2,9 @@ package com.beiying.fitmanager.navigation;
 
 import com.beiying.fitmanager.BYBasicContainer;
 import com.beiying.fitmanager.R;
-import com.beiying.fitmanager.datacollect.BYDataCollectContentView;
 import com.beiying.fitmanager.framework.BYControlCenter;
 import com.beiying.fitmanager.history.BYHistoryView;
+import com.beiying.fitmanager.train.BYTrainBriefView;
 
 public class BYNavigationManager extends BYBasicContainer{
 
@@ -26,9 +26,10 @@ public class BYNavigationManager extends BYBasicContainer{
 		mSelectedId = id;
 		BYControlCenter.getInstance().hideNavigationView();
 		switch (id) {
-		case BYNavigationMenuview.ID_COLLECT:
-			BYDataCollectContentView  dataCollectContentView = new BYDataCollectContentView(view.getContext());
-			BYControlCenter.getInstance().showInMainView(dataCollectContentView);
+		case BYNavigationMenuview.ID_TRAIN:
+//			BYDataCollectContentView  dataCollectContentView = new BYDataCollectContentView(view.getContext());
+			BYTrainBriefView trainBriefView = new BYTrainBriefView(view.getContext());
+			BYControlCenter.getInstance().showInMainView(trainBriefView);
 			break;
 		case BYNavigationMenuview.ID_HISTORY:
 			BYHistoryView historyView = new BYHistoryView(view.getContext());

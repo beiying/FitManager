@@ -1,1 +1,1 @@
-include ':app', ':core'
+include ':app', ':core', ':demo', ':fit_mvp', ':fit_mvvm', ':leographics', ':third_lib', ':base_net', ':avplayer', ':buildSrc', ':plugin_core', ':base', ':module-video', ':module-shop', ':annotation', ':compiler'

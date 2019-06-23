@@ -13,9 +13,9 @@ public class BYTrainBriefView extends LeView {
     private static final int PADDING = 8;
 
     private BYTotalTrainTimeView mTotalTimeView;
-    private BYTrainingView mTrainings;
-    private BYRecommendTrainView mRecommendTrainView;
-    private BYRecommendArticleView mRecommendArticleView;
+    private BYTrainingCardView mTrainings;
+    private BYRecommendTrainCardView mRecommendTrainView;
+    private BYRecommendArticleCardView mRecommendArticleView;
 
     private int mPadding;
 
@@ -27,13 +27,13 @@ public class BYTrainBriefView extends LeView {
         mTotalTimeView = new BYTotalTrainTimeView(context);
         addView(mTotalTimeView);
 
-        mTrainings = new BYTrainingView(context);
+        mTrainings = new BYTrainingCardView(context);
         addView(mTrainings);
 
-        mRecommendTrainView = new BYRecommendTrainView(context);
+        mRecommendTrainView = new BYRecommendTrainCardView(context);
         addView(mRecommendTrainView);
 
-        mRecommendArticleView = new BYRecommendArticleView(context);
+        mRecommendArticleView = new BYRecommendArticleCardView(context);
         addView(mRecommendArticleView);
 
         setBackgroundColor(0xFFE6ECF0);

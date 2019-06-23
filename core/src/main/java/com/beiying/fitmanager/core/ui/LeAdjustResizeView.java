@@ -8,8 +8,8 @@ import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.FrameLayout;
 
+import com.beiying.fitmanager.core.BYSafeRunnable;
 import com.beiying.fitmanager.core.LeLog;
-import com.beiying.fitmanager.core.LeSafeRunnable;
 
 
 public class LeAdjustResizeView extends LeView {
@@ -23,7 +23,7 @@ public class LeAdjustResizeView extends LeView {
     public LeAdjustResizeView(Context context, final boolean drawStatusbar) {
 		super(context);
 		
-		final LeSafeRunnable guessKeyboardVisibilityChanged = new LeSafeRunnable() {
+		final BYSafeRunnable guessKeyboardVisibilityChanged = new BYSafeRunnable() {
 
 	        @Override
 	        public void runSafely() {

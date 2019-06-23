@@ -19,7 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.beiying.fitmanager.core.LeLog;
-import com.beiying.fitmanager.core.LeSafeRunnable;
+import com.beiying.fitmanager.core.BYSafeRunnable;
 import com.beiying.fitmanager.core.ui.LeUI;
 
 import java.io.ByteArrayOutputStream;
@@ -95,7 +95,7 @@ public class LeUtils {
 	}
 
 	public static void showInputMethod(final View anyView) {
-		anyView.postDelayed(new LeSafeRunnable() {
+		anyView.postDelayed(new BYSafeRunnable() {
 			@Override
 			public void runSafely() {
 				final InputMethodManager imm = (InputMethodManager) anyView.getContext().getSystemService(

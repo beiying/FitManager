@@ -9,7 +9,7 @@ import android.graphics.Paint;
 import com.beiying.fitmanager.R;
 import com.beiying.fitmanager.core.ui.LeButton;
 import com.beiying.fitmanager.core.ui.LeUI;
-import com.beiying.fitmanager.core.utils.LeBitmapUtil;
+import com.beiying.fitmanager.core.utils.BYBitmapUtil;
 import com.beiying.fitmanager.core.utils.LeTextUtil;
 
 public class BYNavigationMenuItemView extends LeButton {
@@ -71,7 +71,7 @@ public class BYNavigationMenuItemView extends LeButton {
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		int width = MeasureSpec.getSize(widthMeasureSpec);
-		int height = LeBitmapUtil.getBitmap(getContext(), mIconId).getHeight();
+		int height = BYBitmapUtil.getBitmap(getContext(), mIconId).getHeight();
 		
 		if (mHeight < height) {
 			setMeasuredDimension(width, height);
@@ -88,7 +88,7 @@ public class BYNavigationMenuItemView extends LeButton {
 		if (getId() == BYNavigationManager.getInstance().getSelectedId()) {
 			mPaint.setColor(getResources().getColor(R.color.nav_item_selected));
 			canvas.drawColor(getResources().getColor(R.color.common_clicked_bg_color));
-			mIcon = LeBitmapUtil.getBitmap(getContext(), mSelectedIconId);
+			mIcon = BYBitmapUtil.getBitmap(getContext(), mSelectedIconId);
 		} else {
 			mPaint.setColor(Color.BLACK);
 			if (isPressed()) {
@@ -96,7 +96,7 @@ public class BYNavigationMenuItemView extends LeButton {
 			} else {
 				canvas.drawColor(Color.WHITE);
 			}
-			mIcon = LeBitmapUtil.getBitmap(getContext(), mIconId);
+			mIcon = BYBitmapUtil.getBitmap(getContext(), mIconId);
 		}
 		
 		

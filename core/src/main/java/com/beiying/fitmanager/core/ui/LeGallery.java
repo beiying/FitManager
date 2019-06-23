@@ -12,7 +12,7 @@ import android.view.ViewConfiguration;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
-import com.beiying.fitmanager.core.LeSafeRunnable;
+import com.beiying.fitmanager.core.BYSafeRunnable;
 
 import java.util.ArrayList;
 
@@ -233,7 +233,7 @@ public class LeGallery extends LeFrameViewGroup {
 			mListenerList.get(i).onGalleryScreenChanged(getChildAt(mCurScreen), mCurScreen);
 		}
 
-		postDelayed(new LeSafeRunnable() {
+		postDelayed(new BYSafeRunnable() {
 
 			@Override
 			public void runSafely() {

@@ -54,7 +54,7 @@ public class BYFrameDialogContent extends LeDialogContent {
 	}
 	
 	private void initResoureces() {
-		mPadding = LeDimen.getPadding();
+		mPadding = BYDimen.getPadding();
 		mLinePaddingBottom = LeUI.getDensityDimen(getContext(), UI_LINE_PADDING_BOTTOM);
 		mShadowX = LeUI.getDensityDimen(getContext(), UI_SHADOW_X);
 		mShadowY = LeUI.getDensityDimen(getContext(), UI_SHADOW_Y);
@@ -81,7 +81,7 @@ public class BYFrameDialogContent extends LeDialogContent {
 		mHasCancelButton = true;
 		
 		mMessageView.setGravity(Gravity.CENTER);
-		mMessageView.setTextSize(TypedValue.COMPLEX_UNIT_PX, LeDimen.getTextSize(R.dimen.common_text_normal_size));
+		mMessageView.setTextSize(TypedValue.COMPLEX_UNIT_PX, BYDimen.getTextSize(R.dimen.common_text_normal_size));
 		
 		mSplitLineDrawable = new BYSplitLineDrawable(getContext());
 		mSplitLineDrawable.setLineColor(mLineColor);

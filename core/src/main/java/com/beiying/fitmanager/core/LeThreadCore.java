@@ -32,7 +32,7 @@ public class LeThreadCore {
 	private Handler mUIHandler;
 	
 	private Handler mOtherHandler;
-	private List<LeSafeRunnable> mOtherWaitingList = new ArrayList<LeSafeRunnable>();
+	private List<BYSafeRunnable> mOtherWaitingList = new ArrayList<BYSafeRunnable>();
 	
 	private static LeThreadCore sInstance;
 	
@@ -167,7 +167,7 @@ public class LeThreadCore {
 	}
 
 	/**
-	 * 不带Looper。若要Looper，请使用 {@link #postOnOtherLooper(LeSafeRunnable, long)}
+	 * 不带Looper。若要Looper，请使用 {@link #postOnOtherLooper(BYSafeRunnable, long)}
 	 * @param task
 	 */
 	public void runAsBackgroundPriority(LeThreadTask task) {
@@ -182,7 +182,7 @@ public class LeThreadCore {
 	}
 	
 	/**
-	 * 不带Looper。若要Looper，请使用 {@link #postOnOtherLooper(LeSafeRunnable, long)}
+	 * 不带Looper。若要Looper，请使用 {@link #postOnOtherLooper(BYSafeRunnable, long)}
 	 * @param task
 	 */
 	public void runAsDefaultPriority(LeThreadTask task) {
@@ -258,13 +258,13 @@ public class LeThreadCore {
 		}
 	}
 	
-	public void postOnMainLooper(LeSafeRunnable runnable, long delayMillis) {
+	public void postOnMainLooper(BYSafeRunnable runnable, long delayMillis) {
 		if (mUIHandler != null && runnable != null) {
 			mUIHandler.postDelayed(runnable, delayMillis);
 		}
 	}
 	
-	public void postOnOtherLooper(LeSafeRunnable runnable, long delayMillis) {
+	public void postOnOtherLooper(BYSafeRunnable runnable, long delayMillis) {
 		if (mOtherHandler == null) {
 			synchronized (mOtherWaitingList) {
 				if (mOtherHandler == null) {
@@ -279,7 +279,7 @@ public class LeThreadCore {
 	
 	private void runWaitingTasks() {
 		synchronized (mOtherWaitingList) {
-			for (LeSafeRunnable runnable : mOtherWaitingList) {
+			for (BYSafeRunnable runnable : mOtherWaitingList) {
 				if (runnable.mData == null) {
 					mOtherHandler.post(runnable);
 				} else if (runnable.mData instanceof Long) {

@@ -80,7 +80,7 @@ public class LeRunningStateManager {
 	}
 
 	public static void showRestoreMultWinStatePrompt(final LeMultWindowsState state, final Context context) {
-//		new Handler(Looper.getMainLooper()).postDelayed(new LeSafeRunnable() {
+//		new Handler(Looper.getMainLooper()).postDelayed(new BYSafeRunnable() {
 //			@Override
 //			public void runSafely() {
 //				final LeRestorePrompt toast = new LeRestorePrompt(context);
@@ -96,7 +96,7 @@ public class LeRunningStateManager {
 //						clearMultWinState();
 //					}
 //				});
-//				new Handler(Looper.getMainLooper()).post(new LeSafeRunnable() {
+//				new Handler(Looper.getMainLooper()).post(new BYSafeRunnable() {
 //					@Override
 //					public void runSafely() {
 //						LeControlCenter.getInstance().showFloatView(toast, toast.createFloatCallback());

@@ -22,7 +22,7 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 
 import com.beiying.fitmanager.core.LeLog;
-import com.beiying.fitmanager.core.utils.LeAndroidUtils;
+import com.beiying.fitmanager.core.utils.BYAndroidUtils;
 
 
 public class LeNetStatus {
@@ -65,7 +65,7 @@ public class LeNetStatus {
 		if (context == null) {
 			return false;
 		}
-		ConnectivityManager connManager = LeAndroidUtils.getConnectivityManager(context);
+		ConnectivityManager connManager = BYAndroidUtils.getConnectivityManager(context);
 		NetworkInfo wifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 		return wifi.isAvailable();
 	}
@@ -87,7 +87,7 @@ public class LeNetStatus {
 	}
 
 	public static boolean isWifiIgnoreCheckNetWork(Context context) {
-		ConnectivityManager connectivityManager = LeAndroidUtils.getConnectivityManager(context);
+		ConnectivityManager connectivityManager = BYAndroidUtils.getConnectivityManager(context);
 		NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
 
 		if (activeNetInfo != null && activeNetInfo.isConnected()) {
@@ -135,7 +135,7 @@ public class LeNetStatus {
 		if (context == null) {
 			return ;
 		}
-		ConnectivityManager connectivityManager = LeAndroidUtils.getConnectivityManager(context);
+		ConnectivityManager connectivityManager = BYAndroidUtils.getConnectivityManager(context);
 		NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
 		//Log.i("CW", "activeNetInfo=" + activeNetInfo);
 

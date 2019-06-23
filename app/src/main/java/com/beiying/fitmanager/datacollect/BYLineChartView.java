@@ -61,8 +61,7 @@ public class BYLineChartView extends LeView {
 		dataSets.add(dataSet1);
 		
 		BYLineData lineData = new BYLineData(xVals, dataSets);
-		mLineChart.setData(lineData);
-		
+//		mLineChart.setData(lineData);
 	}
 
 	@Override

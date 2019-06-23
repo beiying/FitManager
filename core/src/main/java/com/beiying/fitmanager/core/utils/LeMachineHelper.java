@@ -159,7 +159,7 @@ public class LeMachineHelper extends ContextContainer {
 	
 	public static String getNetworkType() {
 		String typeName = "";
-		ConnectivityManager manager = LeAndroidUtils.getConnectivityManager(sContext);
+		ConnectivityManager manager = BYAndroidUtils.getConnectivityManager(sContext);
 		NetworkInfo networkInfo = manager.getActiveNetworkInfo();
 		if (networkInfo != null && networkInfo.isConnected()) {
 			typeName = networkInfo.getTypeName();

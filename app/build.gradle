@@ -1,13 +1,20 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'me.ele.lancet'
+apply plugin: 'android-aspectjx'
+//apply plugin: "com.beiying.aop"
 
 android {
-    compileSdkVersion = 24
-    buildToolsVersion = "25.0.0"
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+//    buildToolsVersion BUILDTOOLS_VERSION
+    dataBinding {
+        enabled = true
+    }
 
-     defaultConfig {
+    defaultConfig {
         applicationId "com.beiying.fitmanager"
-        minSdkVersion 14
-        targetSdkVersion 24
+        minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
+        multiDexEnabled true
     }
 
     signingConfigs {
@@ -28,28 +35,76 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            shrinkResources true    //移除无用的资源文件
+//            shrinkResources true    //移除无用的资源文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.release
         }
+        debug {
+            aaptOptions.cruncherEnabled = false //开发时禁用PNG缩紧，加快build速度
+
+            //在开发构建环境禁用多个 APK 生成，因为打包和创建这些 APK 需要时间
+            splits.abi.enable = false
+            splits.density.enable = false
+
+            //在 Firebase Crashlytyics 中禁用更新构建ID。很多人使用 Crashlytics，每次构建 Crashlytics 将默认生成一个唯一的构建ID,只在 debug 块中设置为false。
+            ext.alwaysUpdateBuildId = false
+        }
+
     }
     dexOptions {
         //incremental true
         jumboMode true
         javaMaxHeapSize "4g"
     }
+    flavorDimensions "mode" //风味维度:创建产品风味组,Gradle 不会组合属于相同风味维度的产品风味。
+
+
+    productFlavors {
+        dev {
+            dimension "mode"
+            //开发构建时最小化打包资源，默认情况下，构建系统包含 app 和库使用的所有语言和屏幕密度。开发期间你不需要用到所有的这些资源，
+            // 你能通过添加resConfigs来使用这些资源中的一组，并指定开发构建所需的语言和屏幕密度。
+            resConfigs('en', 'xhdpi')
+        }
+        productFlavors.all {
+            flavor -> flavor.manifestPlaceholders = [channel: name]
+        }
+    }
+
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:support-v4:24.2.0'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
-    compile 'com.android.support:design:24.2.0'
-    compile 'com.google.guava:guava:14.0'
-    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
-    compile 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar'
-    //    compile files('libs/Shimmer.jar')
-    //    compile files('libs/wekaSTRIPPED.jar')
-    compile project(':core')
+    implementation project(':base_net')
+    implementation project(path: ':plugin_core')
+    implementation project(path: ':base')
+    if(IS_MODULE.toBoolean()) {
+        implementation project(path: ':module-video')
+        implementation project(path: ':module-shop')
+    }
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+"
+    implementation 'com.android.support:multidex:1.0.3'
+    //    implementation files('libs/Shimmer.jar')
+    //    implementation files('libs/wekaSTRIPPED.jar')
+
+    //跟性能检测有关的依赖
+    debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+    implementation 'com.github.anrwatchdog:anrwatchdog:1.4.0'
+//    compileOnly 'me.ele:lancet-base:1.0.4'
+    implementation 'org.aspectj:aspectjrt:1.8.+'
+    implementation 'me.weishu:epic:0.3.6'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation ('com.aliyun.ams:alicloud-android-httpdns:1.2.5@aar') {
+        transitive true
+    }
+    implementation 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar'
+    annotationProcessor project(path: ':compiler')
+
+
+//    annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
+//    implementation 'com.zhangyue.we:x2c-lib:1.0.6'
 }

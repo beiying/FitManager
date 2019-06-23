@@ -1,13 +1,24 @@
 package com.beiying.fitmanager.train;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Environment;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.TextView;
 
+import com.beiying.fitmanager.BYBasicContainer;
+import com.beiying.fitmanager.PermissionManager;
+import com.beiying.fitmanager.core.LeLog;
 import com.beiying.fitmanager.core.ui.LeUI;
 import com.beiying.fitmanager.core.ui.LeView;
 import com.beiying.fitmanager.core.utils.LeTextUtil;
+import com.beiying.plugincore.PluginManager;
+import com.beiying.plugincore.ProxyActivity;
+
+import java.security.Permission;
 
 /**
  * Created by beiying on 17/8/7.
@@ -30,8 +41,21 @@ public class BYTotalTrainTimeView extends LeView {
         initView(context);
     }
 
-    private void initView(Context context) {
+    private void initView(final Context context) {
         mTotalTimeView = new BYKeyValueView(context, "总运动(分钟)", "0");
+        mTotalTimeView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PermissionManager.getInstance().processPermission(PermissionManager.REQUEST_READ_EXTERNAL_STORAGE, new PermissionManager.LePermissionProcessor() {
+                    @Override
+                    public void doOnGrantedPermission() {
+                        PluginManager.getInstance().loadPath(
+                                Environment.getExternalStorageDirectory().getAbsolutePath() + "/demo-mock-debug.apk");
+                        jumpActivity();
+                    }
+                });
+            }
+        });
         addView(mTotalTimeView);
 
         mWeekTimeView = new BYKeyValueView(context, "本周运动(分钟)", "0");
@@ -48,6 +72,14 @@ public class BYTotalTrainTimeView extends LeView {
         addView(mDayTimeView);
 
         setBackgroundColor(Color.WHITE);
+    }
+
+    public void jumpActivity() {
+        Intent intent = new Intent().setClass(getContext(), ProxyActivity.class);
+        String apkMainActivity = PluginManager.getInstance().getPackageInfo().activities[1].name;
+        LeLog.e("liuyu jump activity:" + apkMainActivity);
+        intent.putExtra("className", apkMainActivity);
+        getContext().startActivity(intent);
     }
 
     @Override

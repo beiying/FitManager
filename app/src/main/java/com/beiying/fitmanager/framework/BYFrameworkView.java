@@ -1,13 +1,18 @@
 package com.beiying.fitmanager.framework;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.support.v4.view.GravityCompat;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.beiying.fitmanager.R;
 import com.beiying.fitmanager.core.ui.LeUI;
 import com.beiying.fitmanager.core.ui.LeView;
+import com.beiying.fitmanager.framework.featureview.BYFeatureCallback;
+import com.beiying.fitmanager.framework.featureview.BYFeatureView;
 import com.beiying.fitmanager.navigation.BYNavigationView;
 /**
  * 将页面分为部分：
@@ -47,6 +52,7 @@ public class BYFrameworkView extends DrawerLayout {
 		
 		mFeatureView = new BYFeatureView(context);
 		mFeatureView.setVisibility(View.GONE);
+		mFeatureView.initViewSet(mMainContentView);
 		addView(mFeatureView);
 		
 		mFloatView = new BYFloatView(context);
@@ -150,21 +156,22 @@ public class BYFrameworkView extends DrawerLayout {
 		closeDrawer(GravityCompat.START);
 	}
 
-	public void showFeatureView(View view) {
-		if (mFeatureView.getVisibility() != View.VISIBLE) {
-			mFeatureView.setVisibility(View.VISIBLE);
-			mMainContentView.setVisibility(View.GONE);
-			mFloatView.setVisibility(View.GONE);
-			showRealFeatureView(view);
-		} else {
-			showRealFeatureView(view);
-		}
-		
+	public void showFeatureView(View view, BYFeatureCallback callback) {
+		mFeatureView.showFetureView(view, callback, true, ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED, null);
 	}
-	
-	private void showRealFeatureView(View view) {
-		mFeatureView.removeAllViews();
-		mFeatureView.addView(view);
+
+
+
+	public boolean exitFeatureView(boolean animate) {
+		return mFeatureView.exitFeatureView(animate);
 	}
-	
+
+	public boolean backFeatureView(boolean animate, boolean slideBack) {
+		return mFeatureView.backFeatureView(animate, slideBack);
+	}
+
+	public boolean backToFirstFullScreen(int index) {
+		return mFeatureView.backToFirstFullScreen(index);
+	}
+
 }

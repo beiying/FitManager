@@ -41,7 +41,8 @@ public class LeCoreManager {
 	private LeCoreManager() {}
 	
 	public static void init(String pkgName, Activity activity, LeSharedPrefFactory spFactory, LeHttpNet.LeUrlProcessor urlProcessor, boolean debugMode) {
-		
+		LeSafeBox.start(activity);
+
 		ContextContainer.activityStart(pkgName, activity);
 		
 		LeMachineHelper.init(activity);

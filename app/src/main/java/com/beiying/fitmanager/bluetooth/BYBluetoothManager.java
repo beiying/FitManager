@@ -283,7 +283,7 @@ public class BYBluetoothManager extends BYBasicContainer {
 	 * 
 	 * @param enable
 	 */
-	public void scanLeDevice(final boolean enable, ScanCallback scanCallback) {
+	public void scanLeDevice(final boolean enable, final ScanCallback scanCallback) {
 		if (enable) {
 			Handler mHandler = new Handler();
 			mHandler.postDelayed(new Runnable() {
@@ -293,7 +293,7 @@ public class BYBluetoothManager extends BYBasicContainer {
 					LeLog.e("LY stopScan");
 					mIsLeScanning = false;
 					LeLog.e("BYBluetoothManager stopScan");
-					sBluetoothAdapter.getBluetoothLeScanner().stopScan(null);
+					sBluetoothAdapter.getBluetoothLeScanner().stopScan(scanCallback);
 				}
 			}, 30000);
 			mIsLeScanning = true;

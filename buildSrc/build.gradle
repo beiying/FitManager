@@ -1,0 +1,32 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation "com.android.tools.build:gradle:3.4.1"
+    implementation "com.android.tools.build:gradle-api:3.4.1"
+
+    implementation "org.ow2.asm:asm:7.1"
+    implementation "org.ow2.asm:asm-util:7.1"
+    implementation "org.ow2.asm:asm-commons:7.1"
+    implementation "org.javassist:javassist:3.25.0-GA"
+}
+repositories {
+    jcenter()
+    google()
+    mavenCentral()
+}
+
+//group = "com.beiying.aop"
+//version = "1.0.1"
+//archivesBaseName='asm-plugin'
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: uri("../repo"))
+//        }
+//    }
+//}

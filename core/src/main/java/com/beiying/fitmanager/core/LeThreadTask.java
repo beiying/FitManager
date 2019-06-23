@@ -1,6 +1,6 @@
 package com.beiying.fitmanager.core;
 
-public abstract class LeThreadTask extends LeSafeRunnable implements Comparable<LeThreadTask> {
+public abstract class LeThreadTask extends BYSafeRunnable implements Comparable<LeThreadTask> {
 
 	public static final int PRIORITY_HIGH = 10;
 	public static final int PRIORITY_DEFAULT = 0;

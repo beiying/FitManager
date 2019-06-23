@@ -10,13 +10,13 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.beiying.fitmanager.R;
-import com.beiying.fitmanager.core.LeSafeRunnable;
+import com.beiying.fitmanager.core.BYSafeRunnable;
 import com.beiying.fitmanager.core.ui.LeLinearLayout;
 import com.beiying.fitmanager.core.ui.LeTitlebar;
 import com.beiying.fitmanager.core.ui.LeUI;
 import com.beiying.fitmanager.core.ui.LeView;
 import com.beiying.fitmanager.core.utils.LeTextUtil;
-import com.beiying.fitmanager.framework.ui.LeDimen;
+import com.beiying.fitmanager.framework.ui.BYDimen;
 
 /**
  * Created by beiying on 17/5/4.
@@ -39,7 +39,7 @@ public class LoginView extends LeView {
         mTitleContentGap = LeUI.getDensityDimen(context, LOGIN_TITLE_CONTENT_GAP);
 
         mTitlebar = new LeTitlebar(context, R.drawable.toolbar_back, "登录");
-        mTitlebar.setBackAction(new LeSafeRunnable() {
+        mTitlebar.setBackAction(new BYSafeRunnable() {
             @Override
             public void runSafely() {
 //                BYControlCenter.getInstance().backFullScreen();
@@ -155,7 +155,7 @@ public class LoginView extends LeView {
 
             mPaint = new Paint();
             mPaint.setAntiAlias(true);
-            mPaint.setTextSize(LeDimen.getTextSize());
+            mPaint.setTextSize(BYDimen.getTextSize());
 
             mLine = getResources().getDrawable(R.drawable.divide_line);
             mBgDrawable = new ColorDrawable(Color.parseColor("#0d191919"));

@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+apply plugin: 'idea'
+apply plugin: 'org.greenrobot.greendao'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compileOnly 'com.squareup.okhttp3:okhttp:3.14.0'
+    implementation 'org.greenrobot:greendao:3.2.2'
+}
+
+greendao {
+    schemaVersion 1 //数据库版本号
+    daoPackage "com.beiying.thirdlib.dao"  // 设置DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    generateTests false //设置为true以自动生成单元测试。
+}
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn tasks.findByName('idea')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

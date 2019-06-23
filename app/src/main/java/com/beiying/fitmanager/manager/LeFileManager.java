@@ -3,7 +3,7 @@ package com.beiying.fitmanager.manager;
 import android.content.Context;
 import android.os.Environment;
 
-import com.beiying.fitmanager.core.utils.LeAndroidUtils;
+import com.beiying.fitmanager.core.utils.BYAndroidUtils;
 
 import java.io.File;
 
@@ -106,7 +106,7 @@ public class LeFileManager {
 
 	public static String getDirSd() {
 		if (sDirSd == null) {
-			sDirSd = LeAndroidUtils.getExternalStorageAbsolutePath(null);
+			sDirSd = BYAndroidUtils.getExternalStorageAbsolutePath(null);
 			File file = new File(sDirSd + DIR_SDCARD);
 			file.mkdirs();
 		}

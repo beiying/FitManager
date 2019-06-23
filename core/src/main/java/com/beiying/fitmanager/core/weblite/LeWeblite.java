@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-import com.beiying.fitmanager.core.LeSafeRunnable;
+import com.beiying.fitmanager.core.BYSafeRunnable;
 import com.beiying.fitmanager.core.net.LeNetTask;
 import com.beiying.fitmanager.core.net.LeHttpNet.LeUrlProcessor;
 
@@ -40,7 +40,7 @@ public class LeWeblite {
 			public boolean override(String url) {
 				final String remoteUrl = mTask.adjustToRemoteUrl(url);
 				if (remoteUrl != null) {
-					new Handler(Looper.getMainLooper()).post(new LeSafeRunnable() {
+					new Handler(Looper.getMainLooper()).post(new BYSafeRunnable() {
 						
 						@Override
 						public void runSafely() {

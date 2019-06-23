@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.beiying.module.video">
+
+    <application>
+        <activity android:name="com.beiying.module.video.MVideoMainActivity"></activity>
+    </application>
+</manifest>

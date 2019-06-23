@@ -54,8 +54,8 @@ public class LeHandlerCore {
 							switch (msg.what) {
 							case MSG_DEFALUT_DO:
 								if (msg.obj != null) {
-									if (msg.obj instanceof LeSafeRunnable) {
-										LeSafeRunnable safeRunnable = (LeSafeRunnable) msg.obj;
+									if (msg.obj instanceof BYSafeRunnable) {
+										BYSafeRunnable safeRunnable = (BYSafeRunnable) msg.obj;
 										safeRunnable.run();
 										
 									}
@@ -93,7 +93,7 @@ public class LeHandlerCore {
 		}
 	}
 	
-	public abstract static class LeHandlerTask extends LeSafeRunnable {
+	public abstract static class LeHandlerTask extends BYSafeRunnable {
 		
 	}
 }

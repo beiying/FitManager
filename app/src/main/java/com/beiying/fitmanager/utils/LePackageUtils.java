@@ -120,7 +120,7 @@ public class LePackageUtils {
 //        }
 //
 //        //新开一个线程安装，否则安装大的 apk 会卡死 UI 线程
-//        Thread thread = new Thread(new LeSafeRunnable() {
+//        Thread thread = new Thread(new BYSafeRunnable() {
 //            @Override
 //            public void runSafely() {
 //                nac.setResponseCallBack(new ShellCommand.ShellCommandResponseEx() {

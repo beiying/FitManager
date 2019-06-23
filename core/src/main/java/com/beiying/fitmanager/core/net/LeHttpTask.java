@@ -1,8 +1,8 @@
 package com.beiying.fitmanager.core.net;
 
 
+import com.beiying.fitmanager.core.BYSafeRunnable;
 import com.beiying.fitmanager.core.LeLog;
-import com.beiying.fitmanager.core.LeSafeRunnable;
 import com.beiying.fitmanager.core.LeThreadTask;
 import com.beiying.fitmanager.core.data.LeLocalLoader;
 import com.beiying.fitmanager.core.weblite.LeExpireTime;
@@ -14,7 +14,7 @@ public abstract class LeHttpTask {
 	private LeLocalLoader mLoader;
 	private LeHttpNet mNet;
 
-	private LeSafeRunnable mUpdateRunnable;
+	private BYSafeRunnable mUpdateRunnable;
 
 	private LeHttpTaskListener mListener;
 	
@@ -201,7 +201,7 @@ public abstract class LeHttpTask {
 			mUpdateRunnable = null;
 			mNet.forceStart(param, ourServer, setting);
 		} else {
-			mUpdateRunnable = new LeSafeRunnable() {
+			mUpdateRunnable = new BYSafeRunnable() {
 				
 				@Override
 				public void runSafely() {

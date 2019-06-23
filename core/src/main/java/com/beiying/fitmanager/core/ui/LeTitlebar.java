@@ -20,7 +20,7 @@ import android.graphics.Paint;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import com.beiying.fitmanager.core.LeSafeRunnable;
+import com.beiying.fitmanager.core.BYSafeRunnable;
 import com.beiying.fitmanager.core.utils.LeTextUtil;
 
 
@@ -38,7 +38,7 @@ public class LeTitlebar extends LeView {
 	protected int mPaddingLeft;
 	protected int mIconTextGap;
 	
-	private LeSafeRunnable mBackAction;
+	private BYSafeRunnable mBackAction;
 	
 	public String mTitle;
 
@@ -86,7 +86,7 @@ public class LeTitlebar extends LeView {
 		mPaint.setTextSize(LeUI.getDensityDimen(getContext(), UI_TITLE_SIZE));
 	}
 	
-	public void setBackAction(LeSafeRunnable runnable) {
+	public void setBackAction(BYSafeRunnable runnable) {
 		mBackAction = runnable;
 	}
 	
